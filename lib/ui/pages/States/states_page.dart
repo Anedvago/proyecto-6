@@ -9,13 +9,13 @@ class States extends StatelessWidget {
     return Scaffold(
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: 1,
-          backgroundColor: Color(0xFF27AE60),
+          backgroundColor: const Color(0xFF27AE60),
           type: BottomNavigationBarType.fixed,
           selectedItemColor: Colors.white,
           unselectedItemColor: Colors.white.withOpacity(.54),
           selectedFontSize: 14,
           unselectedFontSize: 14,
-          items: [
+          items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               label: "publicaciones",
               icon: Icon(
@@ -35,18 +35,47 @@ class States extends StatelessWidget {
           ],
         ),
         appBar: AppBar(
-          title: Text("Estados"),
-          backgroundColor: Color(0xFF27AE60),
-          actions: [Icon(Icons.search), Icon(Icons.more_vert)],
+          title: const Text("Estados"),
+          backgroundColor: const Color(0xFF27AE60),
+          actions: const [Icon(Icons.search), Icon(Icons.more_vert)],
+        ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: const Color(0xFF27AE60),
+          child: const Icon(Icons.add),
+          onPressed: () {},
         ),
         backgroundColor: const Color(0xFF343434),
         body: SizedBox(
           width: double.infinity,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(),
+              Card(
+                color: const Color(0xFF474646),
+                child: Container(
+                  decoration: BoxDecoration(
+                      border:
+                          Border.all(color: const Color(0xFF27AE60), width: 2)),
+                  child: Column(
+                    children: const <Widget>[
+                      ListTile(
+                        leading: Icon(Icons.arrow_drop_down_circle),
+                        title: Text(
+                          'Nombre',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(16.0),
+                        child: Text(
+                          'Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ));
