@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:misiontic_template/ui/pages/Posts/posts_page.dart';
+import 'package:misiontic_template/ui/pages/PrincipalPage/principalpage_page.dart';
 import 'package:misiontic_template/ui/pages/States/states_page.dart';
 
 class Login extends StatelessWidget {
@@ -55,7 +57,7 @@ class Login extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => States()),
+                      MaterialPageRoute(builder: (context) => MainPage()),
                     );
                   },
                   style: ButtonStyle(

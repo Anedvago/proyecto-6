@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:misiontic_template/domain/use_case/controllers/theme_controller.dart';
 import 'package:misiontic_template/domain/use_case/theme_management.dart';
-import 'package:misiontic_template/ui/pages/Login/login_page.dart';
 import 'package:misiontic_template/ui/pages/Register/register_page.dart';
-import 'package:misiontic_template/ui/pages/response/response_page.dart';
 import 'package:misiontic_template/ui/theme/theme.dart';
 
 class App extends StatefulWidget {
@@ -44,7 +42,7 @@ class _AppState extends State<App> {
             theme: MyTheme.ligthTheme,
             darkTheme: MyTheme.darkTheme,
             themeMode: ThemeMode.system,
-            home: Register(),
+            home: const Register(),
           );
   }
 }

@@ -6,6 +6,33 @@ class States extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: 1,
+          backgroundColor: const Color(0xFF27AE60),
+          type: BottomNavigationBarType.fixed,
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.white.withOpacity(.54),
+          selectedFontSize: 14,
+          unselectedFontSize: 14,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              label: "publicaciones",
+              icon: Icon(
+                Icons.music_note,
+              ),
+            ),
+            BottomNavigationBarItem(
+              label: "Estados",
+              icon: Icon(
+                Icons.book,
+              ),
+            ),
+            BottomNavigationBarItem(
+              label: "Chats",
+              icon: Icon(Icons.message),
+            )
+          ],
+        ),
         appBar: AppBar(
           title: const Text("Estados"),
           backgroundColor: const Color(0xFF27AE60),
